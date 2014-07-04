@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A09E3919674B69000EC8EB /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A09E3819674B69000EC8EB /* WhiskeyViewController.m */; };
+		84A09E3C19674D6F000EC8EB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A09E3B19674D6F000EC8EB /* MainMenuViewController.m */; };
 		84C480081964E94800C63ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C480071964E94800C63ED5 /* main.m */; };
 		84C4800B1964E94800C63ED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C4800A1964E94800C63ED5 /* AppDelegate.m */; };
 		84C4800E1964E94800C63ED5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C4800D1964E94800C63ED5 /* ViewController.m */; };
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84A09E3719674B69000EC8EB /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		84A09E3819674B69000EC8EB /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
+		84A09E3A19674D6F000EC8EB /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		84A09E3B19674D6F000EC8EB /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		84C480021964E94800C63ED5 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C480061964E94800C63ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C480071964E94800C63ED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +92,10 @@
 				84C4800F1964E94800C63ED5 /* Main.storyboard */,
 				84C480121964E94800C63ED5 /* Images.xcassets */,
 				84C480051964E94800C63ED5 /* Supporting Files */,
+				84A09E3719674B69000EC8EB /* WhiskeyViewController.h */,
+				84A09E3819674B69000EC8EB /* WhiskeyViewController.m */,
+				84A09E3A19674D6F000EC8EB /* MainMenuViewController.h */,
+				84A09E3B19674D6F000EC8EB /* MainMenuViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -216,8 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C4800E1964E94800C63ED5 /* ViewController.m in Sources */,
+				84A09E3919674B69000EC8EB /* WhiskeyViewController.m in Sources */,
 				84C4800B1964E94800C63ED5 /* AppDelegate.m in Sources */,
 				84C480081964E94800C63ED5 /* main.m in Sources */,
+				84A09E3C19674D6F000EC8EB /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
