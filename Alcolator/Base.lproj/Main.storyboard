@@ -6,35 +6,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Root View Controller-->
-        <scene sceneID="Vf2-Ll-BV5">
-            <objects>
-                <tableViewController id="U8a-BM-rkl" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9uV-BC-F3L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZZn-Mp-zfF">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZn-Mp-zfF" id="luq-7i-JjB">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="U8a-BM-rkl" id="lpv-3F-uEt"/>
-                            <outlet property="delegate" destination="U8a-BM-rkl" id="AJK-cS-yTE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tVe-nq-5qX"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsz-x9-f0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-131" y="59"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WZw-sV-ees">
             <objects>
@@ -43,12 +14,53 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="U8a-BM-rkl" kind="relationship" relationship="rootViewController" id="lgZ-wa-rcL"/>
+                        <segue destination="kAH-DP-MQM" kind="relationship" relationship="rootViewController" id="nAI-Qn-mTW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOY-FZ-ycM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="59"/>
+            <point key="canvasLocation" x="-495" y="59"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="REp-Y5-9Vt">
+            <objects>
+                <viewController id="kAH-DP-MQM" customClass="MainMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="huu-Pl-PHy"/>
+                        <viewControllerLayoutGuide type="bottom" id="abF-sc-Wd3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HSR-oh-aYU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-r5-GtZ">
+                                <rect key="frame" x="143" y="142" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wine">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="wine" id="dTf-qw-SId"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-vJ-RhB">
+                                <rect key="frame" x="131" y="280" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Whiskey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="whiskey" id="ecU-D8-W1I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YnU-95-1i5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvo-3t-kZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="59"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -120,6 +132,7 @@
                             <outletCollection property="gestureRecognizers" destination="XkM-kb-iiR" appends="YES" id="4Wh-Pg-JjD"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Tmu-C6-Sw1"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="PvM-68-6n7" id="msK-Je-z6u"/>
@@ -142,4 +155,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ecU-D8-W1I"/>
+    </inferredMetricsTieBreakers>
 </document>

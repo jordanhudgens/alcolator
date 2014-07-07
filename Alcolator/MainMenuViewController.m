@@ -47,4 +47,20 @@
     [self.navigationController pushViewController:whiskeyVC animated:YES];
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"whiskey"]) {
+        ViewController* vc =  segue.destinationViewController;
+        vc.ouncesInOneGlass =1;
+        vc.alcoholPercentageOfDrink = .4;
+        vc.drinkName = @"whiskey";
+    }
+    else if([[segue identifier] isEqualToString:@"wine"]){
+        ViewController* vc =  segue.destinationViewController;
+        vc.ouncesInOneGlass = 5;
+        vc.alcoholPercentageOfDrink = .13;
+        vc.drinkName = @"wine";
+    }
+}
+
 @end

@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.beerPercentTextField becomeFirstResponder]; // so the text field is auto selected
-    self.title = NSLocalizedString(@"Wine", @"wine");
+    self.title = self.drinkName;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,10 +53,10 @@
     float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
     float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
     
-    float ouncesInOneWineGlass = 5;
-    float alcoholPercentageOfWine = 0.13;
+//    float ouncesInOneWineGlass = 5;
+//    float alcoholPercentageOfWine = 0.13;
     
-    float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
+    float ouncesOfAlcoholPerWineGlass = self.ouncesInOneGlass * self.alcoholPercentageOfDrink;
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
     
     NSString *beerText;
@@ -75,7 +75,7 @@
         wineText = NSLocalizedString(@"glasses", "plural of glass");
     }
     
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText, numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of %@.", nil), numberOfBeers, beerText, numberOfWineGlassesForEquivalentAlcoholAmount, wineText, self.drinkName];
     
     self.resultLabel.text = resultText;
 }

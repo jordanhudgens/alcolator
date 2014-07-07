@@ -87,11 +87,11 @@
 			children = (
 				84C480091964E94800C63ED5 /* AppDelegate.h */,
 				84C4800A1964E94800C63ED5 /* AppDelegate.m */,
-				84C4800C1964E94800C63ED5 /* ViewController.h */,
-				84C4800D1964E94800C63ED5 /* ViewController.m */,
 				84C4800F1964E94800C63ED5 /* Main.storyboard */,
 				84C480121964E94800C63ED5 /* Images.xcassets */,
 				84C480051964E94800C63ED5 /* Supporting Files */,
+				84C4800C1964E94800C63ED5 /* ViewController.h */,
+				84C4800D1964E94800C63ED5 /* ViewController.m */,
 				84A09E3719674B69000EC8EB /* WhiskeyViewController.h */,
 				84A09E3819674B69000EC8EB /* WhiskeyViewController.m */,
 				84A09E3A19674D6F000EC8EB /* MainMenuViewController.h */,
