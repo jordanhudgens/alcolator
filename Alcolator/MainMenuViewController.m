@@ -42,6 +42,11 @@
     [self.navigationController pushViewController:wineVC animated:YES];
 }
 
+- (void) wineButtonPressed:(UITabBar *) sender {
+    ViewController *wineVC = [[ViewController alloc] init];
+    [self.navigationController pushViewController:wineVC animated:YES];
+}
+
 - (void) whiskeyPressed:(UIButton *) sender {
     WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
     [self.navigationController pushViewController:whiskeyVC animated:YES];

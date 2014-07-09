@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "WhiskeyViewController.h"
 #import "MainMenuViewController.h"
 
 @interface AppDelegate ()
