@@ -21,6 +21,12 @@
     [super viewDidLoad];
     [self.beerPercentTextField becomeFirstResponder]; // so the text field is auto selected
     self.title = self.drinkName;
+    
+    UITabBarItem *wineItem = [[[self.tabBarController tabBar] items] objectAtIndex:0];
+    [wineItem setTitle:@"Wine"];
+    
+    UITabBarItem *whiskeyItem = [[[self.tabBarController tabBar] items] objectAtIndex:1];
+    [whiskeyItem setTitle:@"Whiskey"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,6 +88,19 @@
 
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
     [self.beerPercentTextField resignFirstResponder];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    if ([self.tabBarController selectedIndex] == 0) {
+        self.ouncesInOneGlass = 5;
+        self.alcoholPercentageOfDrink = .13;
+        self.drinkName = @"wine";
+    } else if ([self.tabBarController selectedIndex] == 1) {
+        self.ouncesInOneGlass =1;
+        self.alcoholPercentageOfDrink = .4;
+        self.drinkName = @"whiskey";
+    }
 }
 
 @end
